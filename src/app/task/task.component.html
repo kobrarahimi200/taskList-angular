@@ -22,8 +22,9 @@
             ngModel
             class="form-control"
             minlength="3"
-            maxlength="200"
+            maxlength="235"
           />
+          <span *ngIf="!f.valid">The number if character should be between 3 and 235</span>
         </div>
       </div>
       <div class="row mt-3">
