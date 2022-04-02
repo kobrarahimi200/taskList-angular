@@ -1,1 +1,14 @@
-<p>List</p>
+<div class="flex-row d-flex col-sm-7 mt-1 list-group-item" [ngClass]="{
+    done: tasks.isDone === true}">
+  <span class="col-sm-3 p-2">{{ tasks.name }}  </span>
+  <span class="col-sm-8 p-2">{{ tasks.description }}</span>
+  <button
+    class="btn btn-primary float-right p-2"
+    (click)="tasks.isDone = true"
+    [ngClass]="{
+        doneBtn: tasks.isDone === true}"
+        [disabled]="tasks.isDone == true"
+  >
+    Done
+  </button>
+</div>

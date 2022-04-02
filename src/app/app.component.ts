@@ -1,3 +1,4 @@
+import { TaskObj } from './taskObj';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'taskList';
+  
+  allTasks :TaskObj[]  = [];
+
+
+  onTaskAdded($task: {name :string, description:string}){
+    this.allTasks.push({
+    name: $task.name,
+    description:$task.description,
+    isDone:false
+  });
+  console.log($task.name);
+
+}
 }

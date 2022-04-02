@@ -1,0 +1,9 @@
+.done{
+    background-color: rgb(246, 246, 246);
+}
+
+.doneBtn{
+    background-color: rgb(41, 150, 68);
+    color: black;
+    border: 2px solid rgb(11, 139, 11);
+}
