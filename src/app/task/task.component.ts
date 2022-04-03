@@ -26,7 +26,5 @@ export class TaskComponent implements OnInit {
       description: value.description
     });
 
-    // console.log(value);
-    console.log(this.taskList);
   }
 }

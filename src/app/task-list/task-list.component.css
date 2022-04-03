@@ -1,9 +1,19 @@
+.open-task{
+    background-color: rgba(185, 247, 166, 0.541);
+}
 .done{
     background-color: rgb(246, 246, 246);
+    border: 2px solid rgb(160, 161, 160);
 }
 
 .doneBtn{
     background-color: rgb(41, 150, 68);
-    color: black;
+    color: rgb(255, 255, 255);
     border: 2px solid rgb(11, 139, 11);
+}
+
+.disabledBtn{
+    background-color: rgb(164, 167, 165);
+    color: black;
+    border: 2px solid rgb(79, 82, 79);
 }

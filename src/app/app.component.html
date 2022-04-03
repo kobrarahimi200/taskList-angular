@@ -2,8 +2,7 @@
   <div class="row justify-content-md-center mt-5 col-sm-12">
     <h5>Task List</h5>
     <app-task (taskList) = "onTaskAdded($event)"></app-task>
-        <app-task-list *ngFor="let task of allTasks" [tasks] = "task"> 
+        <app-task-list *ngFor="let task of allTasks" [task] = "task"> 
         </app-task-list>
-    
   </div>
 </div>

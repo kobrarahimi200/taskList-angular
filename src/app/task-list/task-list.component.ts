@@ -8,14 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TaskListComponent implements OnInit {
 
-  @Input() tasks : {name: String , description : string, isDone:boolean};
+  @Input() task : {name: String , description : string, isDone:boolean};
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+  deleteTask(){
+    // this.tasks.splice();
+  }
   // toggleDone(){
   //   if(this.tasks.isDone){
   //     this.tasks.isDone = false;

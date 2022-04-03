@@ -10,15 +10,11 @@ export class AppComponent {
   title = 'taskList';
   
   allTasks :TaskObj[]  = [];
-
-
   onTaskAdded($task: {name :string, description:string}){
     this.allTasks.push({
     name: $task.name,
     description:$task.description,
     isDone:false
   });
-  console.log($task.name);
-
 }
 }
