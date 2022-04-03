@@ -1,5 +1,6 @@
+import { TaskService } from './../task.service';
 import { TaskObj } from './../taskObj';
-import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -8,23 +9,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./task.component.css'],
 })
 export class TaskComponent implements OnInit {
-  // name: string;
-  // description: string;
-  @Output() taskList = new EventEmitter<{
-    name: string;
-    description: string;
-  }>();
 
-  constructor() {}
+  constructor(public taskService: TaskService) {}
 
   ngOnInit(): void {}
-
-  addTask(form: NgForm) {
-    const value = form.value;
-    this.taskList.emit({
-      name : value.name,
-      description: value.description
-    });
-
   }
-}
+

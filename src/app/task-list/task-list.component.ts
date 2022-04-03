@@ -1,5 +1,6 @@
 import { TaskObj } from './../taskObj';
 import { Component, Input, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-task-list',
@@ -8,21 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TaskListComponent implements OnInit {
 
-  @Input() task : {name: String , description : string, isDone:boolean};
+  @Input() task : {id: number, name: String , description : string, isDone:boolean};
 
-  constructor() { }
+  constructor(public taskService: TaskService) { }
 
   ngOnInit(): void {
   }
 
-  deleteTask(){
-    // this.tasks.splice();
-  }
-  // toggleDone(){
-  //   if(this.tasks.isDone){
-  //     this.tasks.isDone = false;
-  //   }else{
-  //     this.tasks.isDone = true;
-  //   }
-  // }
 }

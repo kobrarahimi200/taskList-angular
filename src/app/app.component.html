@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row justify-content-md-center mt-5 col-sm-12">
     <h5>Task List</h5>
-    <app-task (taskList) = "onTaskAdded($event)"></app-task>
-        <app-task-list *ngFor="let task of allTasks" [task] = "task"> 
+    <app-task (taskList) = "taskService.addTask($event)"></app-task>
+        <app-task-list *ngFor="let task of taskService.taskList" [task] = "task"> 
         </app-task-list>
   </div>
 </div>

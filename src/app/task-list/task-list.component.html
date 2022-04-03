@@ -2,15 +2,9 @@
     done: task.isDone}">
   <span class="col-sm-3 p-2">{{ task.name }}  </span>
   <span class="col-sm-8 p-2">{{ task.description }}</span>
-  <!-- <button
-    class="btn btn-primary float-right p-2 doneBtn"
-    (click)="deleteTask()"
-  >
-    Delete
-  </button> -->
   <button
     class="btn btn-primary float-right p-2 doneBtn"
-    (click)="task.isDone = true"
+    (click)="taskService.toggleDone(task.id)"
     [ngClass]="{
         disabledBtn: task.isDone}"
         [disabled]="task.isDone"
